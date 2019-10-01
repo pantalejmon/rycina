@@ -1,0 +1,129 @@
+.menu {
+  background: rgb(231, 231, 231);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0 30px 30px 30px;
+  padding: 30px;
+}
+
+.rycina {
+  background: blue;
+  height: calc(100%-500px);
+  bottom: 0;
+  position: fixed;
+  top: 120px;
+  left: 30px;
+  right: 30px;
+}
+
+.paint-size-val {
+  min-width: 2.3rem;
+  border-radius: 3px;
+  padding: 0 10px;
+  color: #333;
+  background: #333;
+
+  margin-right: 30px;
+  margin-left: 10px;
+
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+.paint-size-val:before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-right-color: #333;
+}
+
+/* miejsce na canvasy */
+.paint-canvas-cnt {
+  width: calc(100% - 75px);
+  height: calc(100% - 200px);
+  position: fixed;
+  bottom: 0;
+  cursor: crosshair;
+  border-style: solid;
+  border: #333;
+  border-width: 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0 30px 30px 30px;
+}
+
+.canvas {
+  border-style: solid;
+  margin: 10px;
+  height: 100%;
+  width: 100%;
+  border: #333;
+  border-width: 2px;
+}
+
+/* informacja o wartości range. Domyślnie range czegoś takiego nie ma */
+.paint-size-val {
+  min-width: 2.3rem;
+  border-radius: 3px;
+  padding: 0 10px;
+  color: #333;
+  background: #333;
+  padding: 5px;
+  margin-right: 30px;
+  margin-left: 10px;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+.paint-bar .paint-size-val:before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-right-color: #333;
+}
+
+/* przycisk wyboru koloru */
+.paint-color {
+  height: 60px;
+  width: 60px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+.paint-color::-webkit-color-swatch-wrapper {
+  padding: 3px;
+  border: 0;
+}
+.paint-color::-webkit-color-swatch {
+  border: none;
+  border-radius: 3px;
+}
+
+/* przyciski z akcjami - draw, line, rectangle */
+
+.button-mode[data-mode="draw"] {
+  background-position: 0 0;
+}
+.button-mode[data-mode="line"] {
+  background-position: -60px 0;
+}
+.button-mode[data-mode="rectangle"] {
+  background-position: -120px 0;
+}
+.button-mode:focus {
+  outline: none;
+}
+.button-mode.active {
+  border-color: red;
+  box-shadow: inset 0 0 0 1px red;
+}
+
+/* miejsce na canvasy */
